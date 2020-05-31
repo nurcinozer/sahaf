@@ -48,9 +48,6 @@ router.post('/', async (req, res) => {
         // res.redirect(`books/${newBook.id}`)
         res.redirect(`books`)
     } catch {
-        if (book.coverImageName != null) {
-            removeBookCover(book.coverImageName)
-        }
         renderNewPage(res, book, true)
     }
 })
