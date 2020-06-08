@@ -36,7 +36,7 @@ router.post('/', async(req, res) => {
     } catch {
         res.render('authors/new', {
             author: author,
-            errorMessage: 'error creating author'
+            errorMessage: 'Error Creating Author'
         })
     }
 });
@@ -79,7 +79,7 @@ router.put('/:id', async (req, res) => {
         }
         res.render('authors/edit', {
             author: author,
-            errorMessage: 'error updating author'
+            errorMessage: 'Error Updating Author'
         })
     }
 })

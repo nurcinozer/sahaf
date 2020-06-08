@@ -1,0 +1,52 @@
+:root {
+    --color-btn-primary-background: hsl(228, 44%, 42%);
+    --color-btn-primary-background-dark: hsl(228, 44%, 22%);
+    --color-btn-primary-text: white;
+    --color-btn-danger-background: hsl(10, 88%, 52%);
+    --color-btn-danger-background-dark: hsl(10, 88%, 42%);
+    --color-btn-danger-text: white;
+}
+
+.btn {
+    border: none;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    font-family: 'Archivo', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-row > * {
+    margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+    margin-left: 0;
+}
+
+.btn-primary {
+    color: var(--color-btn-primary-text);
+    background-color: var(--color-btn-primary-background);
+}
+
+.btn-primary:hover {
+    color: var(--color-btn-danger-text);
+    background-color: var(--color-btn-primary-background-dark);
+}
+
+.btn-danger {
+    color: var(--color-btn-danger-text);
+    background-color: var(--color-btn-danger-background);
+}
+
+.btn-danger:hover {
+    color: var(--color-btn-danger-text);
+    background-color: var(--color-btn-danger-background-dark);
+}

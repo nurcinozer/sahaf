@@ -1,10 +1,22 @@
-<h2><%= book.title %></h2>
-<img width="100" height="150" src="<%= book.coverImagePath %>">
-<div>author: <%= book.author.name %></div>
-<div>publish date: <%= book.publishDate.toDateString() %></div>
-<div>page count: <%= book.pageCount %></div>
-<div>description: <%= book.description %></div>
-
-<a href="/books/<%= book.id %>/edit">edit</a>
-<%- include('../partials/deleteForm', {url : `/books/${book.id}`}) %>
-<a href="/authors/<%= book.author.id %>/edit">view author</a>
+<h2 class="page-header"><%= book.title %></h2>
+<div class="book-details">
+    <div>
+        <img class="book-cover" src="<%= book.coverImagePath %>">
+        <div class="book-details-btn-grid">
+            <a class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', {url : `/books/${book.id}`}) %>
+            <a class="btn btn-primary book-details-author-button" href="/authors/<%= book.author.id %>/edit">View
+                author</a>
+        </div>
+    </div>
+    <div class="book-details-grid">
+        <div class="book-details-label">Author:</div>
+        <div><%= book.author.name %></div>
+        <div class="book-details-label">Publish date:</div>
+        <div><%= book.publishDate.toDateString() %></div>
+        <div class="book-details-label">Page count:</div>
+        <div><%= book.pageCount %></div>
+        <div class="book-details-label">Description:</div>
+        <div><%= book.description %></div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+:root {
+    --form-label-font-size: 1.2rem;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    flex-grow: 1;
+    flex-basis: 0
+}
+
+.form-item:first-child {
+    margin-left: 0;
+}
+
+.form-item-no-grow {
+    flex-grow: 0;
+}
+
+.form-row-end {
+    justify-content: flex-end;
+}
+
+.form-item > label {
+    font-size: var(--form-label-font-size);
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+}
+
+.form-item input, .form-item select, .form-item textarea {
+    height: 2rem;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    border: 1px solid hsla(0, 0%, 86.7%, 0.87);
+    background-color: white;
+    color: #333333;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: 'Archivo', sans-serif;
+    outline: none;
+}
+
+.form-item textarea {
+    height: 100%;
+    resize: none;
+}
+
+.form-item select option {
+    background-color: black;
+}
+
+.filepond--root {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+}
+
+.filepond--panel-root {
+    background-color: white;
+    border: 1px solid hsla(0, 0%, 86.7%, 0.87);
+}
+
+.filepond--drop-label {
+    color: #333333;
+    font-size: inherit
+}
+
+.form-item input:focus, .form-item select:focus, .form-item textarea:focus {
+    border-color: #333333;
+}
