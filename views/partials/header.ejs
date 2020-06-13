@@ -3,9 +3,15 @@
         <a class="header-title" href="/">Sahaf</a>
         <ul>
             <li><a href="/books">Books</a></li>
-            <li><a href="/books/new">Add Book</a></li>
             <li><a href="/authors">Authors</a></li>
+            <% if (displayLink) { %>
+            <li><a href="/books/new">Add Book</a></li>
             <li><a href="/authors/new">Add Author</a></li>
+            <li><a href="/users/logout">Logout</a></li>
+            <% } else { %>
+            <li><a href="/users/login">Login</a></li>
+            <li><a href="/users/register">Register</a></li>
+            <% } %>
         </ul>
     </nav>
 </header>

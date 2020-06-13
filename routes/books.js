@@ -29,7 +29,11 @@ router.get('/', async (req, res) => {
 
 // new book route
 router.get('/new', async (req, res) => {
-    renderNewPage(res, new Book())
+    if(req.session.userId) {
+        return renderNewPage(res, new Book())
+    }
+    
+    res.redirect('/users/login')
 })
 
 // create book route

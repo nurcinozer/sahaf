@@ -22,7 +22,11 @@ router.get('/', async(req, res) => {
 
 // new author route
 router.get('/new', (req, res) => {
-    res.render('authors/new', { author: new Author() })
+    if (req.session.userId) {
+        return res.render('authors/new', { author: new Author() })
+    }
+    
+    res.redirect('/users/login')
 })
 
 // create author route
